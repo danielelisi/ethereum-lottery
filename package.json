@@ -4,17 +4,21 @@
   "private": true,
   "dependencies": {
     "dotenv": "^5.0.1",
+    "fs-extra": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
     "web3": "1.0.0-beta.26"
   },
   "scripts": {
+    "postinstall": "node ethereum-contract/compile.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "test-eth": "mocha --recursive ethereum-contract"
+    "test-eth": "mocha --recursive ethereum-contract/test",
+    "compile-contract": "node ethereum-contract/compile.js",
+    "deploy-contract": "node ethereum-contract/deploy.js"
   },
   "devDependencies": {
     "ganache-cli": "^6.1.0",
