@@ -6,7 +6,7 @@ Simple React app to interact with an Ethereum smart contract deployed on the Rin
 
 Having the MetaMask browser extension installed and swithced to the Rinkeby test network, you can enter the lottery by sending an amount higher than > 0.01 ether.
 
-The owner of the contract can pick a random winner from an array of players addresses stored in the smart contract.
+The owner of the contract can pick a random winner from an array of players addresses stored in the smart contract. Then, The total balance of the contract is sent to the winner.
 
 
 The smart contract address is: [0x69cf024821c9731af5088ab6bca036b5b5e1a1d4](https://rinkeby.etherscan.io/address/0x69cf024821c9731af5088ab6bca036b5b5e1a1d4) 
