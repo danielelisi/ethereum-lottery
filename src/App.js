@@ -16,6 +16,10 @@ class App extends Component {
 
   async componentDidMount() {
     this.fetchBlockchain();
+
+    if (web3.message) {
+      this.setState({ message: web3.message });
+    }
   }
 
   fetchBlockchain = async () => {
@@ -93,7 +97,7 @@ class App extends Component {
           <button>Enter</button>
         </form>
 
-        <h4>Pick a winner!</h4>
+        <h4>Pick a winner! (only contract's owner)</h4>
         <button onClick={this.pickWinner}>Pick a winner!</button>
 
         <hr/>
