@@ -11,6 +11,8 @@ The owner of the contract can pick a random winner from an array of players addr
 
 The smart contract address is: [0x69cf024821c9731af5088ab6bca036b5b5e1a1d4](https://rinkeby.etherscan.io/address/0x69cf024821c9731af5088ab6bca036b5b5e1a1d4) 
 
+![lottery-demo](http://g.recordit.co/umCFBI0ZJc.gif)
+
 ## Installing
 
 ```
