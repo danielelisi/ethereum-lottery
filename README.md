@@ -1,7 +1,46 @@
 # Ethereum Lottery Dapp
 
-This is a lottery app that lets you interact with an Ethereum smart contract deployed on the Rinkeby Test Network.
+**Live Demo: https://lottery-ethereum.herokuapp.com/**
 
-The front end is built in React because it makes it easy to interface and use the Web3 library.
+Simple React app to interact with an Ethereum smart contract deployed on the Rinkeby Test Network.
 
-If you have the MetaMask browser extension installed, you can interact with the lottery app sending transactions from the Rinkeby test network.
+Having the MetaMask browser extension installed and swithced to the Rinkeby test network, you can enter the lottery by sending an amount higher than > 0.01 ether.
+
+The owner of the contract can pick a random winner from an array of players addresses stored in the smart contract.
+
+
+The smart contract address is: [0x69cf024821c9731af5088ab6bca036b5b5e1a1d4](https://rinkeby.etherscan.io/address/0x69cf024821c9731af5088ab6bca036b5b5e1a1d4) 
+
+## Installing
+
+```
+git clone https://github.com/danielelisi/ethereum-lottery.git
+cd ethereum-lottery
+yarn install
+```
+
+After the dependency installation, the post-install script compiles the Solidity contract and outputs the interface in src/lotteryInterface.json. To start the dev server run:
+
+```
+yarn start
+```
+
+## Running the tests
+
+`yarn test-ethereum` to run the test script for the ethereum contract
+
+## Deployment
+
+Deploy on Heroku using the following buildpack for React projects:
+
+```
+heroku create --buildpack https://github.com/mars/create-react-app-buildpack.git` 
+```
+
+## Built With
+
+* [Create-React-App](http://www.dropwizard.io/1.0.2/docs/) - Front End UI
+* [Remix](http://remix.ethereum.org/) - Solidity Web IDE
+* [Web3](https://github.com/ethereum/web3.js/) - Ethereum Javascript Library
+* [METAMASK](https://metamask.io/) - Wallet browser extension
+* [Heroku](https://www.heroku.com/) - Deployment Platform
