@@ -11,7 +11,6 @@ contract Lottery {
     }
 
     function getPlayersArray() public view returns (address[]) {
-        // Can return only an index element from arrays
         return playersArray;
     }
 

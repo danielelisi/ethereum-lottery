@@ -4,12 +4,14 @@ const Web3 = require('web3');
 
 const { interface, bytecode } = require('./build/Lottery.json');
 
-require('dotenv').config(path.resolve(__dirname, '..', '.env.local'));
+require('dotenv').config({ path: path.resolve(__dirname, '..', '.env.local') });
 
 const provider = new HDWalletProvider(
-    process.env.METAMASK_SEEDS,
+    process.env.METAMASK_SEED,
     `https://rinkeby.infura.io/${process.env.INFURA_API}`
 );
+
+console.log(process.env.INFURA_API);
 
 const web3 = new Web3(provider);
 
@@ -19,7 +21,7 @@ const deploy = async () => {
 
     const contract = await new web3.eth.Contract(JSON.parse(interface))
         .deploy({ data: bytecode })
-        .send({ from: accounts[0], gas: '1000000'});
+        .send({ from: accounts[0], gas: '1000000' });
     console.log(`Contract deployed to ${contract.options.address}`);
 }
 

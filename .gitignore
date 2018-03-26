@@ -9,6 +9,7 @@
 # production
 /build
 /ethereum-contract/build
+/src/lotteryInterface.json
 
 # misc
 .DS_Store
